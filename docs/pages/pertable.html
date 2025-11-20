@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pertable</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+		.info-btn {
+			position: relative;
+			display: inline-block;
+			background: #0078d4;
+			color: #fff;
+			border: none;
+			padding: 10px 14px;
+			font-size: 16px;
+			border-radius: 6px;
+			cursor: pointer;
+		}
+		.info-btn:focus { outline: 2px solid #005a9e; outline-offset: 2px; }
+		.info-btn .tooltip {
+			position: absolute;
+			left: 50%;
+			bottom: calc(100% + 8px);
+			transform: translateX(-50%) translateY(6px);
+			background: rgba(0,0,0,0.85);
+			color: #fff;
+			padding: 8px 10px;
+			border-radius: 6px;
+			white-space: nowrap;
+			font-size: 14px;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .16s ease, transform .16s ease;
+			z-index: 10;
+		}
+		.info-btn:hover .tooltip,
+		.info-btn:focus .tooltip,
+		.info-btn:active .tooltip {
+			opacity: 1;
+			transform: translateX(-50%) translateY(0);
+			pointer-events: auto;
+		}
+		.tooltip:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border-width: 6px;
+			border-style: solid;
+			border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Pertable</h1>
+		<p>Example page showing a button that reveals information on hover.</p>
+
+		<button class="info-btn" aria-describedby="tooltip-1">
+			Hover me
+			<span id="tooltip-1" role="status" class="tooltip">This is the extra information shown when hovering the button.</span>
+		</button>
+
+		<p style="margin-top: 1.5rem;">Tip: The tooltip is accessible via keyboard focus as well.</p>
+	</main>
+</body>
+</html>

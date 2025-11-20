@@ -1,9 +1,36 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Edsch9086's Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .site-header { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; background:#f5f5f5; border-bottom:1px solid #e0e0e0; }
+        .site-title { margin:0; font-size:20px; }
+        .site-title a { color:#222; text-decoration:none; }
+        .site-nav { list-style:none; margin:0; padding:0; display:flex; gap:12px; }
+        .site-nav a { color:#0078d4; text-decoration:none; }
+        .site-nav a.unused { color:#999; cursor:default; pointer-events:none; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a sample website built with HTML and CSS.</p>
+    <header class="site-header">
+        <h1 class="site-title"><a href="./index.html">Edsch9086's Website</a></h1>
+        <nav aria-label="Main Navigation">
+            <ul class="site-nav">
+                <li><a href="pages/pertable.html">Pertable</a></li>
+                <li><a href="#" class="unused" aria-disabled="true" title="Unused link">Feature A (unused)</a></li>
+                <li><a href="#" class="unused" aria-disabled="true" title="Unused link">Feature B (unused)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding:18px;">
+        <h2>Welcome</h2>
+        <p>This is a sample website built with HTML and CSS.</p>
+    </main>
+
 </body>
+
 </html>
